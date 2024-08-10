@@ -1,0 +1,22 @@
+{
+  "$schema":  "https://raw.githubusercontent.com/jetify-com/devbox/0.11.1/.schema/devbox.schema.json",
+  "packages": [
+    "python@3.10.14",
+    "uv@latest"
+  ],
+  "env": {
+    // Install your virtual environment in `.venv`
+    "VENV_DIR": ".venv"
+  },
+  "shell": {
+    "init_hook": [
+      "uv venv",
+      "source .venv/bin/activate",
+      "uv pip install -r requirements.txt"
+    ],
+    "scripts": {
+      "run_test": "python main.py",
+      "create_venv": "uv venv"
+    }
+  }
+}

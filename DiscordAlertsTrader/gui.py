@@ -14,7 +14,7 @@ import time
 import re
 import queue
 import PySimpleGUIQt as sg
-from PySide2.QtWidgets import QHeaderView
+from PySide6.QtWidgets import QHeaderView
 
 from DiscordAlertsTrader.brokerages import get_brokerage
 from DiscordAlertsTrader import gui_generator as gg
