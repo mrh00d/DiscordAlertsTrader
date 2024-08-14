@@ -17,12 +17,12 @@ import PySimpleGUIQt as sg
 from PySide2.QtWidgets import QHeaderView
 import matplotlib.pyplot as plt
 
-from DiscordAlertsTrader.brokerages import get_brokerage
+from .brokerages import get_brokerage
 from DiscordAlertsTrader import gui_generator as gg
 from DiscordAlertsTrader import gui_layouts as gl
-from DiscordAlertsTrader.discord_bot import DiscordBot
-from DiscordAlertsTrader.configurator import cfg, channel_ids
-from DiscordAlertsTrader.message_parser import parse_trade_alert, ordersymb_to_str
+from .discord_bot import DiscordBot
+from .configurator import cfg, channel_ids
+from .message_parser import parse_trade_alert, ordersymb_to_str
 # A fix for Macs
 os.environ['QT_MAC_WANTS_LAYER'] = '1'
 
@@ -150,7 +150,7 @@ def quotes_plotting(symbol, trader=None, tracker=None):
                                 (pd.to_datetime(tt.portfolio['Date']).dt.date == datetime.now().date()) ]
             if len(tts):
                 for ix, row in tts.iterrows():
-                    if str(tt.__class__) == "<class 'DiscordAlertsTrader.alerts_tracker.AlertsTracker'>":                        
+                    if str(tt.__class__) == "<class '.alerts_tracker.AlertsTracker'>":                        
                         plt.plot(pd.to_datetime(row['Date']), row['Price'], 'go')
                         plt.text(pd.to_datetime(row['Date']), row['Price']*1.009, f"track:{row['Trader']}: {row['Type']}", fontsize=12, color='g', rotation=45)
                         if not pd.isna(row['STC-Date']):

@@ -4,12 +4,12 @@ import os.path as op
 import pytz
 from datetime import datetime, timedelta, date, time
 import numpy as np
-from DiscordAlertsTrader.configurator import cfg
-from DiscordAlertsTrader.message_parser import parse_symbol
-from DiscordAlertsTrader.port_sim import filter_data, calc_trailingstop, calc_roi, calc_buy_trailingstop, save_or_append_quote
+from .configurator import cfg
+from .message_parser import parse_symbol
+from .port_sim import filter_data, calc_trailingstop, calc_roi, calc_buy_trailingstop, save_or_append_quote
 import matplotlib.pyplot as plt
-from DiscordAlertsTrader.marketdata.thetadata_api import ThetaClientAPI
-from DiscordAlertsTrader.marketdata.polygon import get_poly_data
+from .marketdata.thetadata_api import ThetaClientAPI
+from .marketdata.polygon import get_poly_data
 
 def date_local(date_str):
     return pd.to_datetime(date_str).tz_localize('America/New_York').tz_convert('UTC')

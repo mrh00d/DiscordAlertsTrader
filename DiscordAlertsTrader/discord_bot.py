@@ -7,12 +7,12 @@ import threading
 from colorama import Fore, init
 import discord # this is discord.py-self package not discord
 
-from DiscordAlertsTrader.message_parser import parse_trade_alert
-from DiscordAlertsTrader.configurator import cfg
-from DiscordAlertsTrader.configurator import channel_ids
-from DiscordAlertsTrader.alerts_trader import AlertsTrader
-from DiscordAlertsTrader.alerts_tracker import AlertsTracker
-from DiscordAlertsTrader.server_alert_formatting import server_formatting
+from .message_parser import parse_trade_alert
+from .configurator import cfg
+from .configurator import channel_ids
+from .alerts_trader import AlertsTrader
+from .alerts_tracker import AlertsTracker
+from .server_alert_formatting import server_formatting
 try:
     from .custom_msg_format import msg_custom_formated, msg_custom_formated2
     print("custom message format loaded")
@@ -390,8 +390,8 @@ class DiscordBot(discord.Client):
         return False, order
 
 if __name__ == '__main__':
-    from DiscordAlertsTrader.configurator import cfg, channel_ids
-    from DiscordAlertsTrader.brokerages import get_brokerage
+    from .configurator import cfg, channel_ids
+    from .brokerages import get_brokerage
     bksession = get_brokerage()
     client = DiscordBot(brokerage=bksession, cfg=cfg)
     client.run(cfg['discord']['discord_token'])

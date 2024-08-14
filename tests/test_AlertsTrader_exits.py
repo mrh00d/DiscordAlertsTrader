@@ -5,12 +5,12 @@ from datetime import datetime
 from colorama import  init
 import queue
 
-from DiscordAlertsTrader.alerts_trader import AlertsTrader
-from DiscordAlertsTrader.configurator import cfg 
-from DiscordAlertsTrader.message_parser import parse_trade_alert
-from DiscordAlertsTrader.brokerages.TDA_api import TDA
-from DiscordAlertsTrader.brokerages.eTrade_api import eTrade
-from DiscordAlertsTrader.brokerages.weBull_api import weBull
+from .alerts_trader import AlertsTrader
+from .configurator import cfg 
+from .message_parser import parse_trade_alert
+from .brokerages.TDA_api import TDA
+from .brokerages.eTrade_api import eTrade
+from .brokerages.weBull_api import weBull
 
 
 init(autoreset=True)
@@ -179,6 +179,6 @@ class TestAlertsTrader(unittest.TestCase):
 
 
 
-# @patch('DiscordAlertsTrader.brokerages.TDA_api.TDA')
+# @patch('.brokerages.TDA_api.TDA')
 if __name__ == '__main__':
     unittest.main()

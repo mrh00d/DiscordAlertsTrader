@@ -5,9 +5,9 @@ import pandas as pd
 import re
 import functools
 
-from DiscordAlertsTrader.configurator import cfg
-from DiscordAlertsTrader.brokerages.tradestation import auth as tsa
-from DiscordAlertsTrader.brokerages import BaseBroker, retry_on_exception
+from .configurator import cfg
+from .brokerages.tradestation import auth as tsa
+from .brokerages import BaseBroker, retry_on_exception
 
 
 class TS(BaseBroker):

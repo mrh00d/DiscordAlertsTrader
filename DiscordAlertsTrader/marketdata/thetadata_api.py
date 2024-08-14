@@ -16,9 +16,9 @@ from scipy.stats import norm
 from thetadata import DataType, DateRange, OptionReqType, OptionRight
 from thetadata import ThetaClient
 
-from DiscordAlertsTrader.configurator import cfg
-from DiscordAlertsTrader.port_sim import save_or_append_quote
-from DiscordAlertsTrader.message_parser import parse_symbol
+from .configurator import cfg
+from .port_sim import save_or_append_quote
+from .message_parser import parse_symbol
 
 def get_timestamp(row):
         date_time = (row[DataType.DATE] + timedelta(milliseconds=row[DataType.MS_OF_DAY])) # ET

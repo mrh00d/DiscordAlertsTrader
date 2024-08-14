@@ -1,6 +1,6 @@
 from datetime import datetime
-from DiscordAlertsTrader.alerts_tracker import AlertsTracker
-from DiscordAlertsTrader.port_sim import calc_roi
+from .alerts_tracker import AlertsTracker
+from .port_sim import calc_roi
 import unittest
 import os
 import pandas as pd

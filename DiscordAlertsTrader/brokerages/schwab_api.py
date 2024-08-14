@@ -1,11 +1,11 @@
 import schwab
-from DiscordAlertsTrader.configurator import cfg
+from .configurator import cfg
 
 import httpx
 import os
 
-from DiscordAlertsTrader.configurator import cfg
-from DiscordAlertsTrader.brokerages import BaseBroker, retry_on_exception
+from .configurator import cfg
+from .brokerages import BaseBroker, retry_on_exception
 
 
 class SW(BaseBroker):

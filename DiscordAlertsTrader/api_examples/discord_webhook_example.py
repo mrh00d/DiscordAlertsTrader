@@ -1,5 +1,5 @@
 from discord_webhook import DiscordWebhook
-from DiscordAlertsTrader.configurator import cfg
+from .configurator import cfg
 
 webhook = DiscordWebhook(
                 url=cfg['discord']['webhook'],

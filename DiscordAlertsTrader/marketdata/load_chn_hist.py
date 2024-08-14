@@ -2,21 +2,21 @@ import subprocess
 import os.path as op
 import os
 import pandas as pd
-from DiscordAlertsTrader.configurator import cfg
+from .configurator import cfg
 import pandas as pd
 from datetime import datetime, timedelta
 from thetadata import ThetaClient
 from thetadata import DataType
-from DiscordAlertsTrader.marketdata.thetadata_api import ThetaClientAPI
-from DiscordAlertsTrader.message_parser import parse_trade_alert
-from DiscordAlertsTrader.configurator import cfg
-from DiscordAlertsTrader.alerts_tracker import AlertsTracker
+from .marketdata.thetadata_api import ThetaClientAPI
+from .message_parser import parse_trade_alert
+from .configurator import cfg
+from .alerts_tracker import AlertsTracker
 try:
-    from DiscordAlertsTrader.read_hist_msg_mine import parse_hist_msg
+    from .read_hist_msg_mine import parse_hist_msg
 except ImportError:
-    from DiscordAlertsTrader.read_hist_msg import parse_hist_msg
+    from .read_hist_msg import parse_hist_msg
 
-from DiscordAlertsTrader.port_sim import get_hist_quotes
+from .port_sim import get_hist_quotes
 import re
 
 # parameters

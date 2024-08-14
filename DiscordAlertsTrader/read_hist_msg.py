@@ -2,8 +2,8 @@ import pandas as pd
 import re
 import json
 from datetime import datetime, timezone, timedelta
-from DiscordAlertsTrader.message_parser import parse_trade_alert
-from DiscordAlertsTrader.server_alert_formatting import (
+from .message_parser import parse_trade_alert
+from .server_alert_formatting import (
     format_alert_date_price,
 )
 try:

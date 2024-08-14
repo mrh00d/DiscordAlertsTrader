@@ -39,6 +39,6 @@ setup(
         'Intended Audience :: Information Technology',
         'Operating System :: Microsoft :: Windows',
     ],
-    entry_points = {'console_scripts': ['DiscordAlertsTrader = DiscordAlertsTrader.gui:gui'],
+    entry_points = {'console_scripts': ['DiscordAlertsTrader = .gui:gui'],
           }
 )

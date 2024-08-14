@@ -4,7 +4,7 @@ import pandas as pd
 from datetime import date, timedelta
 import numpy as np
 import matplotlib.pyplot as plt
-from DiscordAlertsTrader.message_parser import parse_symbol
+from .message_parser import parse_symbol
 
 try: 
     from thetadata import OptionReqType, OptionRight, DateRange, DataType

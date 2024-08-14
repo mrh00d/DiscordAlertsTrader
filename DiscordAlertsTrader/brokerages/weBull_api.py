@@ -2,8 +2,8 @@ import re
 import time
 from datetime import datetime
 from webull import webull, paper_webull
-from DiscordAlertsTrader.configurator import cfg
-from DiscordAlertsTrader.brokerages import retry_on_exception
+from .configurator import cfg
+from .brokerages import retry_on_exception
 
 class weBull:
     def __init__(self, paper_trading: bool = False) -> None:

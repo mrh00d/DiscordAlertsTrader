@@ -1,8 +1,8 @@
 from ib_insync import *
 import nest_asyncio
 
-from DiscordAlertsTrader.brokerages import BaseBroker
-from DiscordAlertsTrader.configurator import cfg
+from .brokerages import BaseBroker
+from .configurator import cfg
 from datetime import datetime
 import time
 

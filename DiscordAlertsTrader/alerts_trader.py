@@ -15,8 +15,8 @@ import threading
 import queue
 from colorama import Fore, Back
 
-from DiscordAlertsTrader.configurator import cfg
-from DiscordAlertsTrader.message_parser import parse_exit_plan, set_exit_price_type, ordersymb_to_str
+from .configurator import cfg
+from .message_parser import parse_exit_plan, set_exit_price_type, ordersymb_to_str
 
 
 def find_last_trade(order, trades_log, open_only=True):
@@ -1774,7 +1774,7 @@ def amnt_left(order, position):
 
 
 if __name__ == "__main__":
-    from DiscordAlertsTrader.brokerages import get_brokerage
+    from .brokerages import get_brokerage
     
     bksession = get_brokerage()
     at = AlertsTrader(bksession)

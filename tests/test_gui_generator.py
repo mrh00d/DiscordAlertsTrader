@@ -3,9 +3,9 @@ import os
 import unittest
 import pandas as pd
 import numpy as np
-from DiscordAlertsTrader.gui_generator import get_stats_data
-from DiscordAlertsTrader.configurator import cfg
-from DiscordAlertsTrader.alerts_tracker import calc_stc_prices
+from .gui_generator import get_stats_data
+from .configurator import cfg
+from .alerts_tracker import calc_stc_prices
 
 class TestConfigurator(unittest.TestCase):
 

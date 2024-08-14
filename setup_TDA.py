@@ -1,4 +1,4 @@
-from DiscordAlertsTrader.brokerages.TDA_api import TDA
+from .brokerages.TDA_api import TDA
 
 
 # TD access and refresh tokens will be generated

@@ -3,9 +3,9 @@ from unittest.mock import MagicMock
 import pandas as pd
 import os
 from datetime import datetime, timedelta
-from DiscordAlertsTrader.discord_bot import DiscordBot
+from .discord_bot import DiscordBot
 from mock_discord_message import make_message
-from DiscordAlertsTrader.configurator import cfg
+from .configurator import cfg
 
 root_dir  =  os.path.abspath(os.path.dirname(__file__))
 

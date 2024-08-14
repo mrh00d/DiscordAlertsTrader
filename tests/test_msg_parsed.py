@@ -5,7 +5,7 @@ Created on Wed Jun  9 09:36:51 2021
 
 @author: adonay
 """
-from DiscordAlertsTrader.message_parser import parse_trade_alert
+from .message_parser import parse_trade_alert
 
 import unittest
 import os

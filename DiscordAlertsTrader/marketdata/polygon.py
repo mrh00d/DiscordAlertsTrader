@@ -2,7 +2,7 @@ import requests
 import os
 from datetime import timedelta, datetime
 import pandas as pd 
-from DiscordAlertsTrader.configurator import cfg
+from .configurator import cfg
 import matplotlib.pyplot as plt
 
 def get_poly_data_rest(asset, start, end, range):

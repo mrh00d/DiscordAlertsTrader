@@ -1,7 +1,7 @@
 import re
 from datetime import timezone
 import pandas as pd
-from DiscordAlertsTrader.message_parser import parse_trade_alert
+from .message_parser import parse_trade_alert
 
 
 def msg_custom_formated(message):

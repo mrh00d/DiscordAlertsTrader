@@ -1,7 +1,7 @@
 
 import unittest
 import ast
-from DiscordAlertsTrader.configurator import cfg
+from .configurator import cfg
 
 class TestConfigurator(unittest.TestCase):
 
